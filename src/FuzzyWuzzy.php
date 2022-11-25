@@ -32,14 +32,14 @@ class FuzzyWuzzy
         if ($number % $this->firstDivisor === 0 && $number % $this->secondDivisor === 0 && $number % $this->thirdDivisor === 0) {
             return $this->secondWord . $this->firstWord . $this->firstWord . $this->secondWord;
         }
+        if ($number % $this->firstDivisor === 0 && $number % $this->secondDivisor === 0) {
+            return $this->secondWord . $this->firstWord;
+        }
         if ($number % $this->firstDivisor === 0 && $number % $this->thirdDivisor === 0) {
             return $this->secondWord . $this->firstWord . $this->secondWord;
         }
         if ($number % $this->secondDivisor === 0 && $number % $this->thirdDivisor === 0) {
             return $this->firstWord . $this->secondWord . $this->secondWord;
-        }
-        if ($number % $this->firstDivisor === 0 && $number % $this->secondDivisor === 0) {
-            return $this->secondWord . $this->firstWord;
         }
         if ($number % $this->firstDivisor === 0) {
             return $this->firstWord;

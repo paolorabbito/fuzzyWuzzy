@@ -8,6 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class FuzzyWuzzyTest extends TestCase
 {
+
     public function testShouldReturnString(): void
     {
         $fuzzyWuzzy = new FuzzyWuzzy('Fuzzy', 'Wuzzy', 3, 5, 7);
@@ -16,6 +17,7 @@ class FuzzyWuzzyTest extends TestCase
 
         $this->assertEquals('FuzzyWuzzyFuzzyWuzzyWuzzyFuzzy2FuzzyWuzzyWuzzy', $fuzzyWuzzy->getResult($arrayTest));
     }
+
 
     public function testShouldReturnFuzzy(): void
     {
@@ -26,6 +28,7 @@ class FuzzyWuzzyTest extends TestCase
         $this->assertEquals('Fuzzy', $fuzzyWuzzy->getResult($arrayTest));
     }
 
+
     public function testShouldReturnWuzzy(): void
     {
         $fuzzyWuzzy = new FuzzyWuzzy('Fuzzy', 'Wuzzy', 3, 5, 7);
@@ -35,6 +38,7 @@ class FuzzyWuzzyTest extends TestCase
         $this->assertEquals('Wuzzy', $fuzzyWuzzy->getResult($arrayTest));
     }
 
+
     public function testShouldReturnFuzzyWuzzy(): void
     {
         $fuzzyWuzzy = new FuzzyWuzzy('Fuzzy', 'Wuzzy', 3, 5, 7);
@@ -43,6 +47,7 @@ class FuzzyWuzzyTest extends TestCase
 
         $this->assertEquals('FuzzyWuzzy', $fuzzyWuzzy->getResult($arrayTest));
     }
+
 
     public function testShouldThrowError(): void
     {
